@@ -1,4 +1,13 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using DienmayShop.Application.PhungTest;
+using DienmayShop.Data.EF;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<DienmayShopDbContext>(option => option.UseSqlServer("name=ConnectionStrings:DienmayShopDB"));
+// Add DI
+
+builder.Services.AddScoped<IPhungTestService, PhungTestService>();
 
 // Add services to the container.
 

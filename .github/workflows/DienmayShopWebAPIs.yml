@@ -26,6 +26,12 @@ jobs:
       run: dotnet test "${{ env.WORKING_DIRECTORY }}" --no-build
     - name: Publish
       run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
+    - name: dotnet install ef
+      run: dotnet tool install -g dotnet-ef
+    - name: dotnet bundle migration
+      run: dotnet ef migrations bundle --runtime win-x64 -p ${{ env.WORKING_DIRECTORY }}/${{ env.WORKING_DIRECTORY }}.csproj -o ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp/migrate
+    - name: update database
+      run: dotnet ef database update -p ${{ env.WORKING_DIRECTORY }}/${{ env.WORKING_DIRECTORY }}.csproj --configuration ${{ env.CONFIGURATION }}
     - name: Publish Artifacts
       uses: actions/upload-artifact@v3
       with:

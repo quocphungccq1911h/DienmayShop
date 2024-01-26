@@ -1,7 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Design;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using Microsoft.EntityFrameworkCore;
-using System.IO;
 
 namespace DienmayShop.Data.EF
 {
@@ -13,11 +12,10 @@ namespace DienmayShop.Data.EF
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
-            var connectionString = configuration.GetConnectionString("MobileShopSolutionDb");
-
-            var optionBuilder = new DbContextOptionsBuilder<MobileShopDbContext>();
+            string? connectionString = configuration.GetConnectionString("DienmayShopDB");
+            var optionBuilder = new DbContextOptionsBuilder<DienmayShopDbContext>();
             optionBuilder.UseSqlServer(connectionString);
-            return new MobileShopDbContext(optionBuilder.Options);
+            return new DienmayShopDbContext(optionBuilder.Options);
         }
     }
 }
