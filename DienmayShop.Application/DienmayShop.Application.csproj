@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DienmayShop.Data\DienmayShop.Data.csproj" />
+    <ProjectReference Include="..\DienmayShop.Utilities\DienmayShop.Utilities.csproj" />
     <ProjectReference Include="..\DienmayShop.ViewModel\DienmayShop.ViewModel.csproj" />
   </ItemGroup>
 

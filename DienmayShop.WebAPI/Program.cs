@@ -9,6 +9,9 @@ builder.Services.AddDbContext<DienmayShopDbContext>(option => option.UseSqlServe
 
 builder.Services.AddScoped<IPhungTestService, PhungTestService>();
 
+// add cache into Project
+builder.Services.AddDistributedMemoryCache();
+
 // Add services to the container.
 
 builder.Services.AddControllers();
