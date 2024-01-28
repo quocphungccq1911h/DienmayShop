@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DienmayShop.Utilities.Constants;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
@@ -12,7 +13,7 @@ namespace DienmayShop.Data.EF
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
-            string? connectionString = configuration.GetConnectionString("DienmayShopDB");
+            string? connectionString = configuration.GetConnectionString(SystemConstants.ConnectionString.DienmayShopDB);
             var optionBuilder = new DbContextOptionsBuilder<DienmayShopDbContext>();
             optionBuilder.UseSqlServer(connectionString);
             return new DienmayShopDbContext(optionBuilder.Options);
