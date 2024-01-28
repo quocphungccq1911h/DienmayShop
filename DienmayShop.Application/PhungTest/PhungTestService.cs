@@ -46,6 +46,7 @@ namespace DienmayShop.Application.PhungTest
             };
             _context.PhungTests.Add(phungTest);
             await _context.SaveChangesAsync();
+            await _cache.RemoveAsync(_PhungTestRedis);
             return phungTest.Id;
         }
     }
