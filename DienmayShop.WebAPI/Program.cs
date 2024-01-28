@@ -1,19 +1,16 @@
 ﻿using DienmayShop.Application.PhungTest;
 using DienmayShop.Data.EF;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//builder.Services.AddDbContext<DienmayShopDbContext>(option => option.UseSqlServer("name=ConnectionStrings:DienmayShopDB"));
 // add DB
 builder.Services.AddDbContext<DienmayShopDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DienmayShopDB")));
-// Add DI
 
+// Add DI
 builder.Services.AddScoped<IPhungTestService, PhungTestService>();
 
 // add cache into Project
-//builder.Services.AddDistributedMemoryCache();
 builder.Services.AddStackExchangeRedisCache(option =>
 {
     option.Configuration = builder.Configuration.GetConnectionString("DienmayShop_Redis");
