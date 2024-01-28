@@ -16,6 +16,8 @@ namespace DienmayShop.Data.Configurations
             builder.Property(x => x.SeoDescription).HasMaxLength(500);
             builder.Property(x => x.SeoTitle).HasMaxLength(200);
             builder.Property(x => x.LanguageId).IsUnicode(false).IsRequired().HasMaxLength(5);
+            builder.HasOne(x => x.Language).WithMany(x => x.CategoryTranslations).HasForeignKey(x => x.LanguageId);
+            builder.HasOne(x => x.Category).WithMany(x => x.CategoryTranslations).HasForeignKey(x => x.CategoryId);
 
         }
     }

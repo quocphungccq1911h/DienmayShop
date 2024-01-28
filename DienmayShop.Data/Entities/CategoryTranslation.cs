@@ -7,8 +7,9 @@
         public string Name { set; get; } =  string.Empty;
         public string SeoDescription { set; get; } = string.Empty;
         public string SeoTitle { set; get; } = string.Empty;
-        public string LanguageId { set; get; } = string.Empty;
         public string SeoAlias { set; get; } = string.Empty;
         public Category Category { get; set; }
+        public string LanguageId { set; get; }
+        public Language Language { get; set; }
     }
 }
