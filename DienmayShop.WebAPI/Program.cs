@@ -1,5 +1,6 @@
 ﻿using DienmayShop.Application.PhungTest;
 using DienmayShop.Data.EF;
+using DienmayShop.Data.SystemHelpers.RabbitMQ;
 using DienmayShop.Utilities.Constants;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,8 @@ builder.Services.AddDbContext<DienmayShopDbContext>(option => option.UseSqlServe
 
 // Add DI
 builder.Services.AddScoped<IPhungTestService, PhungTestService>();
+builder.Services.AddScoped<IRabitMQProducer, RabitMQProducer>();
+
 
 // add cache into Project
 builder.Services.AddStackExchangeRedisCache(option =>
