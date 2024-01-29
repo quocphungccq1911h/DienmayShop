@@ -1,4 +1,5 @@
 ﻿using DienmayShop.Application.PhungTest;
+using DienmayShop.Data.SystemHelpers.RabbitMQ;
 using DienmayShop.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,9 +10,11 @@ namespace DienmayShop.WebAPI.Controllers
     public class PhungTestsController : ControllerBase
     {
         private readonly IPhungTestService _phungTestService;
-        public PhungTestsController(IPhungTestService phungTestService)
+        private readonly IRabitMQProducer _rabitMQProducer;
+        public PhungTestsController(IPhungTestService phungTestService, IRabitMQProducer rabitMQProducer)
         {
             _phungTestService = phungTestService;
+            _rabitMQProducer = rabitMQProducer;
         }
         [HttpGet]
         public async Task<IActionResult> GetList()
@@ -27,6 +30,7 @@ namespace DienmayShop.WebAPI.Controllers
                 return BadRequest(ModelState);
             }
             var res = await _phungTestService.Create(resquest);
+            _rabitMQProducer.SendProductMessage(res);
             if (res > 0)
             {
                 return Ok(res);
