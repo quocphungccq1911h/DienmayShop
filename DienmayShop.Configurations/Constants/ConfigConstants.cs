@@ -31,5 +31,7 @@ namespace DienmayShop.Configurations.Constants
                 return EnumEnvironment != EnumEnvironment.Production;
             }
         }
+        public static string TokenWithKey { get; set; }
+        public static string TokenIssuer { get; set; }
     }
 }

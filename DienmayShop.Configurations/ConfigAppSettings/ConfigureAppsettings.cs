@@ -5,7 +5,7 @@ namespace DienmayShop.Configurations.ConfigAppSettings
 {
     public static class ConfigureAppsettings
     {
-        private static EnumEnvironment GetEnvironment()
+        public static EnumEnvironment GetEnvironment()
         {
             switch(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"))
             {

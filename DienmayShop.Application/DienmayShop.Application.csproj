@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DienmayShop.Configurations\DienmayShop.Configurations.csproj" />
     <ProjectReference Include="..\DienmayShop.Data\DienmayShop.Data.csproj" />
     <ProjectReference Include="..\DienmayShop.Utilities\DienmayShop.Utilities.csproj" />
     <ProjectReference Include="..\DienmayShop.ViewModel\DienmayShop.ViewModel.csproj" />

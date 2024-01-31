@@ -1,8 +1,12 @@
-﻿using DienmayShop.Data.Entities;
+﻿using DienmayShop.Configurations.Constants;
+using DienmayShop.Data.Entities;
 using DienmayShop.ViewModel.Common;
 using DienmayShop.ViewModel.System.Users;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
 
 namespace DienmayShop.Application.System.Users
 {
@@ -47,7 +51,12 @@ namespace DienmayShop.Application.System.Users
                 new Claim(ClaimTypes.Role, string.Join(';', roles)),
                 new Claim(ClaimTypes.Name, request.UserName),
             };
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(ConfigConstants.TokenWithKey));
+            var creds = new SigningCredentials(key: key, SecurityAlgorithms.HmacSha256);
 
+            var token = new JwtSecurityToken(ConfigConstants.TokenIssuer,
+                ConfigConstants.TokenIssuer, claims, expires: DateTime.Now.AddMinutes(5), signingCredentials: creds);
+            return new ApiSuccessResult<string>(new JwtSecurityTokenHandler().WriteToken(token));
         }
 
         public Task<ApiResult<bool>> DeleteUser(Guid id)

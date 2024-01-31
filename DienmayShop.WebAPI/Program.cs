@@ -1,5 +1,7 @@
 ﻿using DienmayShop.Application.PhungTest;
 using DienmayShop.Application.System.Users;
+using DienmayShop.Configurations.ConfigAppSettings;
+using DienmayShop.Configurations.Constants;
 using DienmayShop.Data.EF;
 using DienmayShop.Data.Entities;
 using DienmayShop.Data.SystemHelpers.RabbitMQ;
@@ -61,6 +63,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+#region Set Config Variable
+ConfigConstants.EnumEnvironment = ConfigureAppsettings.GetEnvironment();
+ConfigConstants.TokenWithKey = builder.Configuration["Tokens:Key"];
+ConfigConstants.TokenIssuer = builder.Configuration["Tokens:Issuer"];
+
+#endregion
+
 builder.Services.ConfigureSwaggerGen(setup =>
 {
     setup.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -73,7 +82,7 @@ builder.Services.ConfigureSwaggerGen(setup =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment() || app.Environment.IsProduction()) 
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
