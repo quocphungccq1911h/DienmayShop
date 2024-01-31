@@ -19,7 +19,7 @@ namespace DienmayShop.Application.PhungTest
 
         public async Task<List<PhungTestVM>> GetAll()
         {
-            var list = new List<PhungTestVM>();
+            List<PhungTestVM> list;
             byte[]? phungTestListByArray;
 
             phungTestListByArray = await _cache.GetAsync(_PhungTestRedis);

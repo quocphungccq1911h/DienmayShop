@@ -6,10 +6,12 @@
         {
             IsSuccessed = true;
             ResultObj = resultObj;
+            Message = "Thành công";
         }
         public ApiSuccessResult()
         {
             IsSuccessed = true;
+            Message = "Thành công";
         }
     }
 }
