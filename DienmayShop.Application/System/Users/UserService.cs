@@ -2,7 +2,7 @@
 using DienmayShop.ViewModel.Common;
 using DienmayShop.ViewModel.System.Users;
 using Microsoft.AspNetCore.Identity;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Security.Claims;
 
 namespace DienmayShop.Application.System.Users
 {
@@ -10,12 +10,14 @@ namespace DienmayShop.Application.System.Users
     {
         #region Fields
         private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
         #endregion
 
         #region Ctors
-        public UserService(UserManager<AppUser> userManager)
+        public UserService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
         #endregion
 
@@ -25,9 +27,27 @@ namespace DienmayShop.Application.System.Users
             throw new NotImplementedException();
         }
 
-        public Task<ApiResult<string>> Authencate(LoginRequest request)
+        public async Task<ApiResult<string>> Authencate(LoginRequest request)
         {
-            throw new NotImplementedException();
+           var user = await _userManager.FindByNameAsync(request.UserName);
+            if(user == null)
+            {
+                return new ApiErrorResult<string>("Tài khoản không tồn tại");
+            }
+            var result = await _signInManager.PasswordSignInAsync(user, request.Password, request.RememberMe, true);
+            if(!result.Succeeded)
+            {
+                return new ApiErrorResult<string>("Đăng nhập không đúng");
+            }
+            var roles = await _userManager.GetRolesAsync(user);
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.Email, user.Email ?? ""),
+                new Claim(ClaimTypes.GivenName, user.LastName),
+                new Claim(ClaimTypes.Role, string.Join(';', roles)),
+                new Claim(ClaimTypes.Name, request.UserName),
+            };
+
         }
 
         public Task<ApiResult<bool>> DeleteUser(Guid id)
