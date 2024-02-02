@@ -14,7 +14,7 @@ namespace DienmayShop.Configurations.Constants
         {
             get
             {
-                return EnumEnvironment == EnumEnvironment.Local;
+                return EnumEnvironment == EnumEnvironment.Local; 
             }
         }
         public static bool IsProduction
