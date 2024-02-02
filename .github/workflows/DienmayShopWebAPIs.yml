@@ -13,6 +13,14 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+    - name: Check commit message for 'upcode'
+        run: |
+          if [[ $(git log -1 --pretty=%B) == *"upcode"* ]]; then
+            echo "Commit message contains 'upcode'. Running CI/CD..."
+          else
+            echo "Commit message does not contain 'upcode'. Skipping CI/CD."
+            exit 0
+          fi
     - uses: actions/checkout@v3
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v3
