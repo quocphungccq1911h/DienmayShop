@@ -75,6 +75,7 @@ namespace DienmayShop.WebAPI.Controllers
         #endregion
 
         #region UpdateUser
+        [HttpPut("UpdateUser")]
         public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UserUpdateRequest request)
         {
             if(id == Guid.Empty)
@@ -91,6 +92,23 @@ namespace DienmayShop.WebAPI.Controllers
                 return BadRequest(response);
             }
             return Ok(response);
+        }
+        #endregion
+
+        #region Get List User Paging
+        [HttpGet("GetUserPaging")]
+        public async Task<IActionResult> GetUserPaging([FromQuery] GetUserPagingRequest request)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var response = await _userService.GetUsersPaging(request);
+            if(!response.IsSuccessed)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);    
         }
         #endregion
 
