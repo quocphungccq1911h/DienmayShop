@@ -23,7 +23,7 @@ namespace DienmayShop.Application.System.Users
         #endregion
 
         #region Ctors
-        public UserService(UserManager<AppUser> userManager, 
+        public UserService(UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager,
             IDistributedCache distributedCache)
         {
@@ -106,17 +106,18 @@ namespace DienmayShop.Application.System.Users
 
         public async Task<ApiResult<PagedResult<UserVm>>> GetUsersPaging(GetUserPagingRequest request)
         {
-            var response = new ApiResult<PagedResult<UserVm>>();
+            ApiResult<PagedResult<UserVm>> response;
             var jsonDese = JsonConvert.SerializeObject(request);
             var keyCache = $"GetUsersPaging_{jsonDese}";
             byte[]? GetUsersPagingByArray;
             GetUsersPagingByArray = await _distributedCache.GetAsync(keyCache);
-            if(GetUsersPagingByArray != null && GetUsersPagingByArray.Length > 0)
+            if (GetUsersPagingByArray != null && GetUsersPagingByArray.Length > 0)
             {
-                response = ConvertData<ApiResult<PagedResult<UserVm>>>.ByteArrayToObjectList(GetUsersPagingByArray);
+                response = ConvertData<ApiResult<PagedResult<UserVm>>>.ByteArrayToObject(GetUsersPagingByArray);
+                return response;
             }
 
-           var query = _userManager.Users;
+            var query = _userManager.Users;
             if (!string.IsNullOrEmpty(request.Keyword))
             {
                 query.Where(x => x.UserName.Contains(request.Keyword) || x.Email.Contains(request.Keyword));
