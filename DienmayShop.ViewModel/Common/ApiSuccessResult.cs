@@ -13,5 +13,11 @@
             IsSuccessed = true;
             Message = "Thành công";
         }
+
+        public ApiSuccessResult(string message)
+        {
+            IsSuccessed = true;
+            Message = message;
+        }
     }
 }
