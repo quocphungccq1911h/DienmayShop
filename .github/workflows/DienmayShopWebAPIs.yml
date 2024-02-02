@@ -12,16 +12,9 @@ env:
 jobs:
   build:
     runs-on: windows-latest
+    if: "contains(github.event.head_commit.message, 'upcode')"
     steps:
     - uses: actions/checkout@v3
-    - name: Check commit message for
-      run: |
-          if [[ $(git log -1 --pretty=%B) == *"upcode"* ]]; then
-            echo "Commit message contains 'upcode'. Running CI/CD..."
-          else
-            echo "Commit message does not contain 'upcode'. Skipping CI/CD."
-            exit 0
-          fi
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v3
       with:
