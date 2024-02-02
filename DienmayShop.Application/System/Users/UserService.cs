@@ -107,13 +107,12 @@ namespace DienmayShop.Application.System.Users
         public async Task<ApiResult<PagedResult<UserVm>>> GetUsersPaging(GetUserPagingRequest request)
         {
             ApiResult<PagedResult<UserVm>> response;
-            var jsonDese = JsonConvert.SerializeObject(request);
-            var keyCache = $"GetUsersPaging_{jsonDese}";
+            var keyCache = CacheExtensions.CreateCacheName(request);
             byte[]? GetUsersPagingByArray;
             GetUsersPagingByArray = await _distributedCache.GetAsync(keyCache);
             if (GetUsersPagingByArray != null && GetUsersPagingByArray.Length > 0)
             {
-                response = ConvertData<ApiResult<PagedResult<UserVm>>>.ByteArrayToObject(GetUsersPagingByArray);
+                response = ConvertData<ApiSuccessResult<PagedResult<UserVm>>>.ByteArrayToObject(GetUsersPagingByArray);
                 return response;
             }
 
@@ -140,7 +139,10 @@ namespace DienmayShop.Application.System.Users
                 TotalRecords = totalRow,
                 Items = data
             };
-            return new ApiSuccessResult<PagedResult<UserVm>>(pageResult);
+            var result = new ApiSuccessResult<PagedResult<UserVm>>(pageResult);
+            GetUsersPagingByArray = ConvertData<ApiSuccessResult<PagedResult<UserVm>>>.ObjectToByteArray(result);
+            await _distributedCache.SetAsync(keyCache, GetUsersPagingByArray);
+            return result;
         }
 
         public async Task<ApiResult<bool>> Register(RegisterRequest request)
