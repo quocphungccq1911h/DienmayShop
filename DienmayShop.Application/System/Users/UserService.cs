@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Linq;
 
 namespace DienmayShop.Application.System.Users
 {
@@ -108,11 +109,11 @@ namespace DienmayShop.Application.System.Users
         {
             ApiResult<PagedResult<UserVm>> response;
             var keyCache = CacheExtensions.CreateCacheName(request);
-            byte[]? GetUsersPagingByArray;
-            GetUsersPagingByArray = await _distributedCache.GetAsync(keyCache);
-            if (GetUsersPagingByArray != null && GetUsersPagingByArray.Length > 0)
+            byte[]? getUsersPagingByArray;
+            getUsersPagingByArray = await _distributedCache.GetAsync(keyCache);
+            if (getUsersPagingByArray != null && getUsersPagingByArray.Length > 0)
             {
-                response = ConvertData<ApiSuccessResult<PagedResult<UserVm>>>.ByteArrayToObject(GetUsersPagingByArray);
+                response = ConvertData<ApiSuccessResult<PagedResult<UserVm>>>.ByteArrayToObject(getUsersPagingByArray);
                 return response;
             }
 
@@ -140,8 +141,8 @@ namespace DienmayShop.Application.System.Users
                 Items = data
             };
             var result = new ApiSuccessResult<PagedResult<UserVm>>(pageResult);
-            GetUsersPagingByArray = ConvertData<ApiSuccessResult<PagedResult<UserVm>>>.ObjectToByteArray(result);
-            await _distributedCache.SetAsync(keyCache, GetUsersPagingByArray);
+            getUsersPagingByArray = ConvertData<ApiSuccessResult<PagedResult<UserVm>>>.ObjectToByteArray(result);
+            await _distributedCache.SetAsync(keyCache, getUsersPagingByArray);
             return result;
         }
 
