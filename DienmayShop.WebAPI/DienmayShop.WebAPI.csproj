@@ -22,4 +22,8 @@
     <ProjectReference Include="..\DienmayShop.Configurations\DienmayShop.Configurations.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\user-content\" />
+  </ItemGroup>
+
 </Project>

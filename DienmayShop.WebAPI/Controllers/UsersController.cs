@@ -2,7 +2,6 @@
 using DienmayShop.ViewModel.Common;
 using DienmayShop.ViewModel.System.Users;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DienmayShop.WebAPI.Controllers
@@ -109,6 +108,23 @@ namespace DienmayShop.WebAPI.Controllers
                 return BadRequest(response);
             }
             return Ok(response);    
+        }
+        #endregion
+
+        #region update Roles
+        [HttpPut("{id}/role")]
+        public async Task<IActionResult> AssignRole(Guid id, [FromBody] RoleAssignRequest request)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var result = await _userService.AssignRole(id, request);
+            if(!result.IsSuccessed)
+            {
+                return BadRequest(result.Message);
+            }
+            return Ok(result);
         }
         #endregion
 
