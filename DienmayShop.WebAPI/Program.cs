@@ -65,8 +65,8 @@ builder.Services.AddSwaggerGen();
 
 #region Set Config Variable
 ConfigConstants.EnumEnvironment = ConfigureAppsettings.GetEnvironment();
-ConfigConstants.TokenWithKey = builder.Configuration["Tokens:Key"];
-ConfigConstants.TokenIssuer = builder.Configuration["Tokens:Issuer"];
+ConfigConstants.TokenWithKey = builder.Configuration["Tokens:Key"] ?? "";
+ConfigConstants.TokenIssuer = builder.Configuration["Tokens:Issuer"] ?? "";
 
 #endregion
 

@@ -21,6 +21,7 @@ namespace DienmayShop.Application.System.Users
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IDistributedCache _distributedCache;
+        private readonly string _userServiceCache = "userServiceCache";
         #endregion
 
         #region Ctors
@@ -35,9 +36,29 @@ namespace DienmayShop.Application.System.Users
         #endregion
 
         #region Methods
-        public Task<ApiResult<bool>> AssignRole(Guid id, RoleAssignRequest request)
+        public async Task<ApiResult<bool>> AssignRole(Guid id, RoleAssignRequest request)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByIdAsync(id.ToString());
+            if (user is null) return new ApiErrorResult<bool>("Tài khoản không tồn tại");
+            // Lấy ra danh sách các role không được chọn
+            var lstRoleRemove = request.Roles.Where(x=>!x.Selected).Select(x=>x.Name).ToList();
+            foreach(var roleName in  lstRoleRemove)
+            {
+                if(await _userManager.IsInRoleAsync(user, roleName))
+                {
+                    await _userManager.RemoveFromRoleAsync(user, roleName);
+                }
+            }
+            // Lấy ra danh sách các role được chọn
+            var listRoleAssign = request.Roles.Where(x => x.Selected).Select(x => x.Name).ToList();
+            foreach(var roleName  in  listRoleAssign)
+            {
+                if(!await _userManager.IsInRoleAsync(user, roleName))
+                {
+                    await _userManager.AddToRoleAsync(user, roleName);
+                }
+            }
+            return new ApiSuccessResult<bool>("Cập nhật thành công");
         }
 
         public async Task<ApiResult<string>> Authencate(LoginRequest request)
@@ -108,9 +129,8 @@ namespace DienmayShop.Application.System.Users
         public async Task<ApiResult<PagedResult<UserVm>>> GetUsersPaging(GetUserPagingRequest request)
         {
             ApiResult<PagedResult<UserVm>> response;
-            var keyCache = CacheExtensions.CreateCacheName(request);
             byte[]? getUsersPagingByArray;
-            getUsersPagingByArray = await _distributedCache.GetAsync(keyCache);
+            getUsersPagingByArray = await _distributedCache.GetAsync(_userServiceCache);
             if (getUsersPagingByArray != null && getUsersPagingByArray.Length > 0)
             {
                 response = ConvertData<ApiSuccessResult<PagedResult<UserVm>>>.ByteArrayToObject(getUsersPagingByArray);
@@ -142,7 +162,7 @@ namespace DienmayShop.Application.System.Users
             };
             var result = new ApiSuccessResult<PagedResult<UserVm>>(pageResult);
             getUsersPagingByArray = ConvertData<ApiSuccessResult<PagedResult<UserVm>>>.ObjectToByteArray(result);
-            await _distributedCache.SetAsync(keyCache, getUsersPagingByArray);
+            await _distributedCache.SetAsync(_userServiceCache, getUsersPagingByArray);
             return result;
         }
 
@@ -169,6 +189,7 @@ namespace DienmayShop.Application.System.Users
             var result = await _userManager.CreateAsync(user);
             if (result.Succeeded)
             {
+                await _distributedCache.RemoveAsync(_userServiceCache);
                 return new ApiSuccessResult<bool>();
             }
             return new ApiErrorResult<bool>("Đăng ký không thành công");

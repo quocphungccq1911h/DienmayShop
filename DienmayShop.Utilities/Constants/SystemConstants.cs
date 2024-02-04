@@ -1,6 +1,6 @@
 ﻿namespace DienmayShop.Utilities.Constants
 {
-    public class SystemConstants
+    public static class SystemConstants
     {
         public static class ConnectionString
         {
