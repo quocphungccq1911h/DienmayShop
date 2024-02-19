@@ -1,9 +1,11 @@
 ﻿using DienmayShop.Application.Common;
 using DienmayShop.Data.EF;
+using DienmayShop.Data.Entities;
 using DienmayShop.Utilities.Extensions;
 using DienmayShop.ViewModel.Catalog.Products;
 using DienmayShop.ViewModel.Common;
 using Microsoft.AspNetCore.Http;
+using System.Net.Http.Headers;
 
 namespace DienmayShop.Application.Cayalog.Products
 {
@@ -40,9 +42,48 @@ namespace DienmayShop.Application.Cayalog.Products
             throw new NotImplementedException();
         }
 
-        public Task<int> Create(ProductCreateRequest request)
+        public async Task<int> Create(ProductCreateRequest request)
         {
-            throw new NotImplementedException();
+            var product = new Product()
+            {
+                Price = request.Price,
+                OriginalPrice = request.OriginalPrice,
+                CreateDate = DateTime.Now,
+                Stock = request.Stock,
+                ViewCount = 0,
+                IsFeature = request.IsFeatured,
+                ProductTranslations = new List<ProductTranslation>
+                {
+                    new ProductTranslation
+                    {
+                        Name = request.Name,
+                        Description = request.Description,
+                        Details = request.Details,
+                        SeoDescription = request.SeoDescription,
+                        SeoTitle = request.SeoTitle,
+                        SeoAlias = request.SeoAlias,
+                        LanguageId = request.LanguageId,
+                    }
+                }
+            };
+            if(request.ThumbnailImage != null)
+            {
+                product.ProductImages = new List<ProductImage>
+                {
+                    new ProductImage
+                    {
+                        Caption = "Thumbnail Image",
+                        DateCreated = DateTime.Now,
+                        FileSize = (int)request.ThumbnailImage.Length,
+                        ImagePath = await SaveFile(request.ThumbnailImage),
+                        IsDefault = true,
+                        SortOrder = 1
+                    }
+                };
+            }
+            _context.Products.Add(product);
+            await _context.SaveChangesAsync();
+            return product.Id;
         }
 
         public async Task<int> Delete(int productId)
@@ -98,9 +139,9 @@ namespace DienmayShop.Application.Cayalog.Products
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdatePrice(int productId, decimal newPrice)
+        public async Task<bool> UpdatePrice(int productId, decimal newPrice)
         {
-            throw new NotImplementedException();
+            var product = await _context.Products.FindAsync(productId);
         }
 
         public Task<bool> UpdateStock(int productId, int addedQuantity)
@@ -108,6 +149,12 @@ namespace DienmayShop.Application.Cayalog.Products
             throw new NotImplementedException();
         }
         #endregion
-
+        private async Task<string> SaveFile(IFormFile file)
+        {
+            var originalFileName = ContentDispositionHeaderValue.Parse(file?.ContentDisposition).FileName?.Trim('"');
+            var fileName = $"{Guid.NewGuid()}{Path.GetExtension(originalFileName)}";
+            await _storageService.SaveFileAsync(file.OpenReadStream(), fileName);
+            return fileName;
+        }
     }
 }
