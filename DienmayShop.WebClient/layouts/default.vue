@@ -1,11 +1,10 @@
 <template>
     <div>
-        <section>
-            xin chao
-        </section>
+       <SharedHeader />
         <section>
             <Nuxt />
         </section>
+        <SharedFooter />
     </div>
 </template>
 <script>
