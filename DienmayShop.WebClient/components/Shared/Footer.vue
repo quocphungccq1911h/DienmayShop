@@ -5,7 +5,7 @@
                 <div class="row">
                     <aside class="col-12 col-sm-12 col-lg-3">
                         <article class="me-lg-4">
-                            <img src="images/logo-white.png" class="logo-footer">
+                            <img src="~/static/images/logo-white.png" class="logo-footer">
                             <p class="mt-3"> © 2018- 2021 Templatemount. <br> All rights reserved. </p>
                         </article>
                     </aside>
@@ -62,7 +62,7 @@
                 <nav class="dropup">
                     <button class="dropdown-toggle btn text-white d-flex align-items-center py-0" type="button"
                         data-bs-toggle="dropdown">
-                        <img src="images/flags/flag-usa.png" class="me-2" height="20">
+                        <img src="~/static/images/flags/flag-usa.png" class="me-2" height="20">
                         <span>English</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">

@@ -34,8 +34,17 @@ export default {
         href: "/fonts/fontawesome/css/all.min.css",
       },
     ],
+    script: [
+      {
+        type: 'module',
+        src: '/js/bootstrap.bundle.min.js'
+      },
+      {
+        type: 'module',
+        src: '/js/script.js?v=2.0'
+      }
+    ]
   },
-  script: [{ src: "/js/bootstrap.bundle.min.js", async: true, defer: true }],
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
