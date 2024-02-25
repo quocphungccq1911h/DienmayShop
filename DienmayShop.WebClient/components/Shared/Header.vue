@@ -1,87 +1,89 @@
 <template>
-   <header class="section-header">	
-	<section class="header-main bg-white">
-		<div class="container">
-			<div class="row gy-3 align-items-center">
-				<div class="col-lg-2 col-sm-4 col-4">
-					<a href="http://bootstrap-ecommerce.com" class="navbar-brand">
-						<img class="logo" height="40" alt="logo" src="~/static/images/logo.svg">
-					</a> <!-- brand end.// -->
-				</div>
-				<div class="order-lg-last col-lg-5 col-sm-8 col-8">
-					<div class="float-end">
-						<a href="#" class="btn btn-light"> 
-						    <i class="fa fa-user"></i>  <span class="ms-1 d-none d-sm-inline-block">Sign in  </span> 
-						</a>
-						<a href="#" class="btn btn-light"> 
-							<i class="fa fa-heart"></i>  <span class="ms-1 d-none d-sm-inline-block">Wishlist</span>   
-						</a>
-						<a data-bs-toggle="offcanvas" href="#offcanvas_cart" class="btn btn-light"> 
-							<i class="fa fa-shopping-cart"></i> <span class="ms-1">My cart </span> 
-						</a>
-			        </div>
-				</div> <!-- col end.// -->
-				<div class="col-lg-5 col-md-12 col-12">
-					<form action="#" class="">
-		              <div class="input-group">
-		                <input type="search" class="form-control" style="width:55%" placeholder="Search">
-		                <select class="form-select">
-		                  <option value="">All type</option>
-		                  <option value="codex">Special</option>
-		                  <option value="comments">Only best</option>
-		                  <option value="content">Latest</option>
-		                </select>
-		                <button class="btn btn-primary">
-		                  <i class="fa fa-search"></i> 
-		                </button>
-		              </div> <!-- input-group end.// -->
-		            </form>
-				</div> <!-- col end.// -->
-				
-			</div> <!-- row end.// -->
-		</div> <!-- container end.// -->
-	</section> <!-- header-main end.// -->
+   <header class="section-header border-bottom">
 
-	<nav class="navbar navbar-dark bg-primary navbar-expand-lg">
-		<div class="container">
-			<button class="navbar-toggler border" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_main" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			
-			<div class="collapse navbar-collapse" id="navbar_main">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link ps-0" href="#"> Categories </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Hot offers</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Gift boxes</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Projects</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Menu item</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Menu name</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="dropdown-toggle nav-link" href="#" data-bs-toggle="dropdown">
-							Others
-						</a>
-						<ul class="dropdown-menu">
-							<li> <a class="dropdown-item" href="#">Submenu one </a> </li>
-							<li> <a class="dropdown-item" href="#">Submenu two</a> </li>
-							<li> <a class="dropdown-item" href="#">Submenu three</a> </li>
-						</ul>
-					</li>
-				</ul>
-			</div> <!-- collapse end.// -->
-		</div> <!-- container end.// -->
-	</nav> <!-- navbar end.// -->
+<nav class="navbar navbar-expand-xl navbar-light">
+  <div class="container">
+	<a class="navbar-brand" href="http://bootstrap-ecommerce.com">
+	  <img src="~/static/images/logo.svg" height="40" class="logo" alt="logo">
+	</a>
+
+	<div class="d-flex align-items-center">
+	  <div class="d-xl-none me-2">
+		<a href="" class="btn btn-light"> <i class="fa fa-user"></i> </a>
+		<a href="" class="btn btn-light"> <i class="fa fa-heart"></i> </a>
+		<a href="" class="btn btn-light"> Cart (2)</a>
+	  </div>
+
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_main" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	</div>
+
+	<div class="collapse navbar-collapse" id="navbar_main">
+	  <ul class="navbar-nav me-auto">
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Home </a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Men</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Women</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Kids</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Accessory</a>
+		</li>
+		<li class="nav-item dropdown">
+		  <a class="dropdown-toggle nav-link" href="#" type="button" data-bs-toggle="dropdown">
+			More
+		  </a>
+		  <ul class="dropdown-menu">
+			<li> <a class="dropdown-item" href="#">Foods and Drink</a> </li>
+			<li> <a class="dropdown-item" href="#">Home interior</a>  </li>
+			<li>  <hr class="dropdown-divider"> </li>
+			<li> <a class="dropdown-item" href="#">Category name</a> </li>
+			<li>  <a class="dropdown-item" href="#">Another category</a> </li>
+		  </ul>
+		</li>
+	  </ul>
+
+	  <form class="me-3">
+		<div class="input-group">
+		  <input type="text" class="form-control" placeholder="Search">
+		  <button class="btn-icon btn-light btn">  <i class="fa fa-search"></i> </button>
+		</div>
+	  </form> <!-- form end.// -->
+
+	  <div class="widgets-wrap d-none d-xl-flex">
+		
+		<div class="widget-header ms-2">
+		  <a href="#" class="icon icon-sm rounded-circle bg-gray-200">
+			<i class="fa fa-user"></i>
+		  </a>
+		</div>
+
+		<div class="widget-header ms-2">
+		  <a href="#" class="icon icon-sm rounded-circle bg-gray-200">
+			<i class="fa fa-heart"></i>
+		  </a>
+		</div>
+
+		<div class="widget-header  ms-2">
+		  <a href="#" class="icon icon-sm rounded-circle bg-gray-200">
+			<i class="fa fa-shopping-cart"></i>
+			<span class="notify">0</span>
+		  </a>
+		</div>
+
+	  </div>
+
+	</div> <!-- collapse end.// -->
+  </div> <!-- container end.// -->
+</nav> <!-- navbar end.// -->
+
 </header> <!-- section-header end.// -->
 </template>
 <script>

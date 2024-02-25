@@ -184,6 +184,7 @@
                                         <li>Modern style and design</li>
                                     </ul>
                                     <table class="table border table-hover">
+                                       <tbody>
                                         <tr>
                                             <th> Display: </th>
                                             <td> 13.3-inch LED-backlit display with IPS </td>
@@ -204,6 +205,7 @@
                                             <th> Graphics </th>
                                             <td> Intel Iris Plus Graphics 640 </td>
                                         </tr>
+                                       </tbody>
                                     </table>
                                 </article> <!-- tab-content.// -->
                                 <article id="tab_warranty" class="tab-pane card-body">

@@ -36,7 +36,7 @@
                             <li> <a href="#"> My Orders </a></li>
                         </ul>
                     </aside>
-                    <aside class="col-12 col-sm-12 col-lg-3">
+                    <aside class="col-12 col-sm-12 col-lg-3" aria-label="aside">
                         <h6 class="title">Newsletter</h6>
                         <p>Stay in touch with latest updates about our products and offers </p>
 
@@ -62,7 +62,7 @@
                 <nav class="dropup">
                     <button class="dropdown-toggle btn text-white d-flex align-items-center py-0" type="button"
                         data-bs-toggle="dropdown">
-                        <img src="~/static/images/flags/flag-usa.png" class="me-2" height="20">
+                        <img src="~/static/images/flags/flag-usa.png" class="me-2" height="20" alt="flag-usa">
                         <span>English</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -81,6 +81,3 @@ export default {
 
 }
 </script>
-<style lang="">
-    
-</style>
