@@ -1,7 +1,5 @@
 <template>
-    <div>
-        Trang detail
-    </div>
+   
 </template>
 <script>
 export default {

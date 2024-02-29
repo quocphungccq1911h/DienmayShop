@@ -171,9 +171,9 @@
                                             <span class="form-check-label">
                                                 <ul class="rating-stars">
                                                     <li class="stars-active" style="width: 100%;">
-                                                        <img src="images/misc/stars-active.svg" alt="">
+                                                        <img src="~/static/images/misc/stars-active.svg" alt="">
                                                     </li>
-                                                    <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
+                                                    <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                                 </ul>
                                             </span>
                                         </label> <!-- form-check end.// -->
@@ -182,9 +182,9 @@
                                             <span class="form-check-label">
                                                 <ul class="rating-stars">
                                                     <li class="stars-active" style="width: 80%;">
-                                                        <img src="images/misc/stars-active.svg" alt="">
+                                                        <img src="~/static/images/misc/stars-active.svg" alt="">
                                                     </li>
-                                                    <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
+                                                    <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                                 </ul>
                                             </span>
                                         </label> <!-- form-check end.// -->
@@ -193,9 +193,9 @@
                                             <span class="form-check-label">
                                                 <ul class="rating-stars">
                                                     <li class="stars-active" style="width: 60%;">
-                                                        <img src="images/misc/stars-active.svg" alt="">
+                                                        <img src="~/static/images/misc/stars-active.svg" alt="">
                                                     </li>
-                                                    <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
+                                                    <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                                 </ul>
                                             </span>
                                         </label> <!-- form-check end.// -->
@@ -204,9 +204,9 @@
                                             <span class="form-check-label">
                                                 <ul class="rating-stars">
                                                     <li class="stars-active" style="width: 40%;">
-                                                        <img src="images/misc/stars-active.svg" alt="">
+                                                        <img src="~/static/images/misc/stars-active.svg" alt="">
                                                     </li>
-                                                    <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
+                                                    <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                                 </ul>
                                             </span>
                                         </label> <!-- form-check end.// -->
@@ -247,7 +247,7 @@
                         <article class="card card-product-list">
                             <div class="row g-0">
                                 <aside class="col-xl-3 col-md-4">
-                                    <a href="#" class="img-wrap"> <img src="images/items/8.jpg"> </a>
+                                    <a href="#" class="img-wrap"> <img src="~/static/images/items/8.jpg"> </a>
                                 </aside> <!-- col.// -->
                                 <div class="col-xl-6 col-md-5 col-sm-7">
                                     <div class="card-body">
@@ -256,9 +256,9 @@
                                         <div class="rating-wrap mb-2">
                                             <ul class="rating-stars">
                                                 <li class="stars-active" style="width: 90%;">
-                                                    <img src="images/misc/stars-active.svg" alt="">
+                                                    <img src="~/static/images/misc/stars-active.svg" alt="">
                                                 </li>
-                                                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
+                                                <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                             </ul>
                                             <span class="label-rating text-warning">4.5</span>
                                             <i class="dot"></i>
@@ -289,7 +289,7 @@
                         <article class="card card-product-list">
                             <div class="row g-0">
                                 <aside class="col-xl-3 col-md-4">
-                                    <a href="#" class="img-wrap"> <img src="images/items/9.jpg"> </a>
+                                    <a href="#" class="img-wrap"> <img src="~/static/images/items/9.jpg"> </a>
                                 </aside> <!-- col.// -->
                                 <div class="col-xl-6 col-md-5 col-sm-7">
                                     <div class="card-body">
@@ -298,9 +298,9 @@
                                         <div class="rating-wrap mb-2">
                                             <ul class="rating-stars">
                                                 <li class="stars-active" style="width: 40%;">
-                                                    <img src="images/misc/stars-active.svg" alt="">
+                                                    <img src="~/static/images/misc/stars-active.svg" alt="">
                                                 </li>
-                                                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
+                                                <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                             </ul>
                                             <span class="label-rating text-warning">3.5</span>
                                             <i class="dot"></i>
@@ -331,7 +331,7 @@
                         <article class="card card-product-list">
                             <div class="row g-0">
                                 <aside class="col-xl-3 col-md-4">
-                                    <a href="#" class="img-wrap"> <img src="images/items/10.jpg"> </a>
+                                    <a href="#" class="img-wrap"> <img src="~/static/images/items/10.jpg"> </a>
                                 </aside> <!-- col.// -->
                                 <div class="col-xl-6 col-md-5 col-sm-7">
                                     <div class="card-body">
@@ -340,9 +340,9 @@
                                         <div class="rating-wrap mb-2">
                                             <ul class="rating-stars">
                                                 <li class="stars-active" style="width: 70%;">
-                                                    <img src="images/misc/stars-active.svg" alt="">
+                                                    <img src="~/static/images/misc/stars-active.svg" alt="">
                                                 </li>
-                                                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
+                                                <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                             </ul>
                                             <span class="label-rating text-warning">3.5</span>
                                             <i class="dot"></i>
@@ -372,7 +372,7 @@
                         <article class="card card-product-list">
                             <div class="row g-0">
                                 <aside class="col-xl-3 col-md-4">
-                                    <a href="#" class="img-wrap"> <img src="images/items/11.jpg"> </a>
+                                    <a href="#" class="img-wrap"> <img src="~/static/images/items/11.jpg"> </a>
                                 </aside> <!-- col.// -->
                                 <div class="col-xl-6 col-md-5 col-sm-7">
                                     <div class="card-body">
@@ -381,9 +381,9 @@
                                         <div class="rating-wrap mb-2">
                                             <ul class="rating-stars">
                                                 <li class="stars-active" style="width: 90%;">
-                                                    <img src="images/misc/stars-active.svg" alt="">
+                                                    <img src="~/static/images/misc/stars-active.svg" alt="">
                                                 </li>
-                                                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
+                                                <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                             </ul>
                                             <span class="label-rating text-warning">4.5</span>
                                             <i class="dot"></i>
@@ -414,7 +414,7 @@
                         <article class="card card-product-list">
                             <div class="row g-0">
                                 <aside class="col-xl-3 col-md-4">
-                                    <a href="#" class="img-wrap"> <img src="images/items/12.jpg"> </a>
+                                    <a href="#" class="img-wrap"> <img src="~/static/images/items/12.jpg"> </a>
                                 </aside> <!-- col.// -->
                                 <div class="col-xl-6 col-md-5 col-sm-7">
                                     <div class="card-body">
@@ -423,9 +423,9 @@
                                         <div class="rating-wrap mb-2">
                                             <ul class="rating-stars">
                                                 <li class="stars-active" style="width: 90%;">
-                                                    <img src="images/misc/stars-active.svg" alt="">
+                                                    <img src="~/static/images/misc/stars-active.svg" alt="">
                                                 </li>
-                                                <li> <img src="images/misc/starts-disable.svg" alt=""> </li>
+                                                <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                             </ul>
                                             <span class="label-rating text-warning">4.5</span>
                                             <i class="dot"></i>

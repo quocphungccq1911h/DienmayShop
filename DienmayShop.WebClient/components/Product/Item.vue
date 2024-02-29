@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
             <figure class="card card-product-grid">
-                <a href="#" class="img-wrap">
+                <a href="/may-lanh/may-lanh-lg/detail/7" class="img-wrap">
                     <span class="topbar"> <b class="badge bg-success"> Offer </b> </span>
-                    <img src="images/items/12.jpg">
+                    <img src="~/static/images/items/12.jpg">
                 </a>
                 <figcaption class="info-wrap border-top">
-                    <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                    <a href="#" class="title text-truncate">Blue T-shirt for Men</a>
+                    <a href="/may-lanh/may-lanh-lg/detail/7" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
+                    <a href="/may-lanh/may-lanh-lg/detail/7" class="title text-truncate">Blue T-shirt for Men</a>
                     <small class="text-muted">Sizes: S, M, XL</small>
                     <div class="price-wrap">
                         <span class="price">$15.90</span> <del class="price-old">$20</del>
@@ -20,7 +20,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
             <figure class="card card-product-grid">
                 <a href="#" class="img-wrap">
-                    <img src="images/items/11.jpg">
+                    <img src="~/static/images/items/11.jpg">
                 </a>
                 <figcaption class="info-wrap border-top">
                     <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
@@ -34,7 +34,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
             <figure class="card card-product-grid">
                 <a href="#" class="img-wrap">
-                    <img src="images/items/10.jpg">
+                    <img src="~/static/images/items/10.jpg">
                 </a>
                 <figcaption class="info-wrap border-top">
                     <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
@@ -48,7 +48,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
             <figure class="card card-product-grid">
                 <a href="#" class="img-wrap">
-                    <img src="images/items/9.jpg">
+                    <img src="~/static/images/items/9.jpg">
                 </a>
                 <figcaption class="info-wrap border-top">
                     <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
@@ -62,7 +62,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
             <figure class="card card-product-grid">
                 <a href="#" class="img-wrap">
-                    <img src="images/items/5.jpg">
+                    <img src="~/static/images/items/5.jpg">
                 </a>
                 <figcaption class="info-wrap border-top">
                     <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
@@ -76,7 +76,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
             <figure class="card card-product-grid">
                 <a href="#" class="img-wrap">
-                    <img src="images/items/6.jpg">
+                    <img src="~/static/images/items/6.jpg">
                 </a>
                 <figcaption class="info-wrap border-top">
                     <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
@@ -90,7 +90,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
             <figure class="card card-product-grid">
                 <a href="#" class="img-wrap">
-                    <img src="images/items/7.jpg">
+                    <img src="~/static/images/items/7.jpg">
                 </a>
                 <figcaption class="info-wrap border-top">
                     <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
@@ -104,7 +104,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
             <figure class="card card-product-grid">
                 <a href="#" class="img-wrap">
-                    <img src="images/items/8.jpg">
+                    <img src="~/static/images/items/8.jpg">
                 </a>
                 <figcaption class="info-wrap border-top">
                     <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
