@@ -1,6 +1,5 @@
 <template>
     <Fragment>
-        <!-- ============== SECTION PAGETOP ============== -->
         <section class="bg-primary padding-y-sm">
             <div class="container">
                 <ol class="breadcrumb ondark mb-0">
@@ -8,136 +7,19 @@
                     <li class="breadcrumb-item"><a href="#">Library</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Data</li>
                 </ol>
-
-            </div> <!-- container //  -->
+            </div>
         </section>
-        <!-- ============== SECTION PAGETOP END// ============== -->
-
-        <!-- ============== SECTION CONTENT ============== -->
         <section class="padding-y">
             <div class="container">
 
                 <div class="row">
-                    <aside class="col-lg-6">
-                        <article class="gallery-wrap">
-                            <div class="img-big-wrap img-thumbnail">
-                                <a data-fslightbox="mygalley" data-type="image"
-                                    href="~/static/images/items/detail1/big.jpg">
-                                    <img height="560" src="~/static/images/items/detail1/big.jpg" alt="big.jpg">
-                                </a>
-                            </div> <!-- img-big-wrap.// -->
-                            <div class="thumbs-wrap">
-                                <a data-fslightbox="mygalley" data-type="image" href="~/static/mages/items/detail1/big1.jpg"
-                                    class="item-thumb">
-                                    <img width="60" height="60" src="~/static/images/items/detail1/thumb1.jpg"
-                                        alt="thumb1.jpg">
-                                </a>
-                                <a data-fslightbox="mygalley" data-type="image"
-                                    href="~/static/images/items/detail1/big2.jpg" class="item-thumb">
-                                    <img width="60" height="60" src="~/static/images/items/detail1/thumb2.jpg">
-                                </a>
-                                <a data-fslightbox="mygalley" data-type="image"
-                                    href="~/static/images/items/detail1/big3.jpg" class="item-thumb">
-                                    <img width="60" height="60" src="~/static/images/items/detail1/thumb3.jpg">
-                                </a>
-                                <a data-fslightbox="mygalley" data-type="image"
-                                    href="~/static/images/items/detail1/big4.jpg" class="item-thumb">
-                                    <img width="60" height="60" src="~/static/images/items/detail1/thumb4.jpg">
-                                </a>
-                                <a data-fslightbox="mygalley" data-type="image" href="~/static/images/items/detail1/big.jpg"
-                                    class="item-thumb">
-                                    <img width="60" height="60" src="~/static/images/items/detail1/thumb.jpg">
-                                </a>
-                            </div> <!-- thumbs-wrap.// -->
-                        </article> <!-- gallery-wrap .end// -->
-                    </aside>
-                    <main class="col-lg-6">
-                        <article class="ps-lg-3">
-                            <h4 class="title text-dark">Quality Men's Hoodie for Winter, Men's Fashion <br> Casual Hoodie
-                            </h4>
-                            <div class="rating-wrap my-3">
-                                <ul class="rating-stars">
-                                    <li style="width:80%" class="stars-active"> <img
-                                            src="~/static/images/misc/stars-active.svg" alt="">
-                                    </li>
-                                    <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
-                                </ul>
-                                <b class="label-rating text-warning"> 4.5</b>
-                                <i class="dot"></i>
-                                <span class="label-rating text-muted"> <i class="fa fa-shopping-basket"></i> 154 orders
-                                </span>
-                                <i class="dot"></i>
-                                <span class="label-rating text-success">In stock</span>
-                            </div> <!-- rating-wrap.// -->
-
-                            <div class="mb-3">
-                                <var class="price h5">$75.00</var>
-                                <span class="text-muted">/per box</span>
-                            </div>
-
-                            <p>Modern look and quality demo item is a streetwear-inspired collection that continues to break
-                                away from the conventions of mainstream fashion. Made in Italy, these black and brown
-                                clothing
-                                low-top shirts for men.</p>
-
-                            <dl class="row">
-                                <dt class="col-3">Type:</dt>
-                                <dd class="col-9">Regular</dd>
-
-                                <dt class="col-3">Color</dt>
-                                <dd class="col-9">Brown</dd>
-
-                                <dt class="col-3">Material</dt>
-                                <dd class="col-9">Cotton, Jeans </dd>
-
-                                <dt class="col-3">Brand</dt>
-                                <dd class="col-9">Reebook </dd>
-                            </dl>
-
-                            <hr>
-
-                            <div class="row mb-4">
-                                <div class="col-md-4 col-6 mb-2">
-                                    <label class="form-label">Size</label>
-                                    <select class="form-select">
-                                        <option>Small</option>
-                                        <option>Medium</option>
-                                        <option>Large</option>
-                                    </select>
-                                </div> <!-- col.// -->
-                                <div class="col-md-4 col-6 mb-3">
-                                    <label class="form-label d-block">Quantity</label>
-                                    <div class="input-group input-spinner">
-                                        <button class="btn btn-icon btn-light" type="button">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#999"
-                                                viewBox="0 0 24 24">
-                                                <path d="M19 13H5v-2h14v2z"></path>
-                                            </svg>
-                                        </button>
-                                        <input class="form-control text-center" placeholder="" value="14">
-                                        <button class="btn btn-icon btn-light" type="button">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#999"
-                                                viewBox="0 0 24 24">
-                                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
-                                            </svg>
-                                        </button>
-                                    </div> <!-- input-group.// -->
-                                </div> <!-- col.// -->
-                            </div> <!-- row.// -->
-
-                            <a href="#" class="btn  btn-warning"> Buy now </a>
-                            <a href="#" class="btn  btn-primary"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart
-                            </a>
-                            <a href="#" class="btn  btn-light"> <i class="me-1 fa fa-heart"></i> Save </a>
-
-                        </article> <!-- product-info-aside .// -->
-                    </main> <!-- col.// -->
-                </div> <!-- row.// -->
-
-            </div> <!-- container .//  -->
+                    <ProductGallery />
+                    <DetailAreaSpectification />
+                </div>
+            </div>
         </section>
-        <!-- ============== SECTION CONTENT END// ============== -->
-            <DetailArea />
+        <DetailArea />
+        <Comment />
     </Fragment>
 </template>
 <script>

@@ -1,7 +1,5 @@
 <template>
     <Fragment>
-
-        <!-- ============== SECTION PAGETOP ============== -->
         <section class="bg-primary py-5">
             <div class="container">
                 <h2 class="text-white">Men's wear</h2>
@@ -10,21 +8,14 @@
                     <li class="breadcrumb-item"><a href="#">Library</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Data</li>
                 </ol>
-            </div> <!-- container //  -->
+            </div>
         </section>
-        <!-- ============== SECTION PAGETOP END// ============== -->
-
-        <!-- ============== SECTION CONTENT ============== -->
         <section class="padding-y">
             <div class="container">
-
                 <div class="row">
                     <aside class="col-lg-3">
-
                         <button class="btn btn-outline-secondary mb-3 w-100  d-lg-none" data-bs-toggle="collapse"
                             data-bs-target="#aside_filter">Show filter</button>
-
-                        <!-- ===== Card for sidebar filter ===== -->
                         <div id="aside_filter" class="collapse card d-lg-block mb-5">
 
                             <article class="filter-group">
@@ -46,10 +37,9 @@
                                             <li><a href="#">Shoes for men </a></li>
                                             <li><a href="#">Accessories </a></li>
                                         </ul>
-                                    </div> <!-- card-body.// -->
+                                    </div>
                                 </div>
-                            </article> <!-- filter-group // -->
-
+                            </article>
                             <article class="filter-group">
                                 <header class="card-header">
                                     <a href="#" class="title" data-bs-toggle="collapse"
@@ -64,37 +54,37 @@
                                             <input class="form-check-input" type="checkbox" value="" checked>
                                             <span class="form-check-label"> Mercedes </span>
                                             <b class="badge rounded-pill bg-gray-dark float-end">120</b>
-                                        </label> <!-- form-check end.// -->
+                                        </label>
 
                                         <label class="form-check mb-2">
                                             <input class="form-check-input" type="checkbox" value="" checked>
                                             <span class="form-check-label"> Toyota </span>
                                             <b class="badge rounded-pill bg-gray-dark float-end">15</b>
-                                        </label> <!-- form-check end.// -->
+                                        </label>
 
                                         <label class="form-check mb-2">
                                             <input class="form-check-input" type="checkbox" value="" checked>
                                             <span class="form-check-label"> Mitsubishi </span>
                                             <b class="badge rounded-pill bg-gray-dark float-end">35</b>
-                                        </label> <!-- form-check end.// -->
+                                        </label>
 
                                         <label class="form-check mb-2">
                                             <input class="form-check-input" type="checkbox" value="" checked>
                                             <span class="form-check-label"> Nissan </span>
                                             <b class="badge rounded-pill bg-gray-dark float-end">89</b>
-                                        </label> <!-- form-check end.// -->
+                                        </label>
 
                                         <label class="form-check mb-2">
                                             <input class="form-check-input" type="checkbox" value="">
                                             <span class="form-check-label"> Honda </span>
                                             <b class="badge rounded-pill bg-gray-dark float-end">30</b>
-                                        </label> <!-- form-check end.// -->
+                                        </label>
 
                                         <label class="form-check mb-2">
                                             <input class="form-check-input" type="checkbox" value="">
                                             <span class="form-check-label"> Honda accord </span>
                                             <b class="badge rounded-pill bg-gray-dark float-end">30</b>
-                                        </label> <!-- form-check end.// -->
+                                        </label>
                                     </div>
                                 </div>
                             </article>
@@ -113,17 +103,17 @@
                                             <div class="col-6">
                                                 <label for="min" class="form-label">Min</label>
                                                 <input class="form-control" id="min" placeholder="$0" type="number">
-                                            </div> <!-- col end.// -->
+                                            </div>
 
                                             <div class="col-6">
                                                 <label for="max" class="form-label">Max</label>
                                                 <input class="form-control" id="max" placeholder="$1,0000" type="number">
-                                            </div> <!-- col end.// -->
-                                        </div> <!-- row end.// -->
+                                            </div>
+                                        </div>
                                         <button class="btn btn-light w-100" type="button">Apply</button>
-                                    </div> <!-- card-body.// -->
+                                    </div>
                                 </div>
-                            </article> <!-- filter-group // -->
+                            </article>
 
                             <article class="filter-group">
                                 <header class="card-header">
@@ -153,9 +143,9 @@
                                             <input type="checkbox">
                                             <span class="btn btn-light"> XXL </span>
                                         </label>
-                                    </div> <!-- card-body.// -->
+                                    </div>
                                 </div>
-                            </article> <!-- filter-group // -->
+                            </article>
 
                             <article class="filter-group">
                                 <header class="card-header">
@@ -176,7 +166,7 @@
                                                     <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                                 </ul>
                                             </span>
-                                        </label> <!-- form-check end.// -->
+                                        </label>
                                         <label class="form-check mb-2">
                                             <input class="form-check-input" type="checkbox" value="" checked="">
                                             <span class="form-check-label">
@@ -187,7 +177,7 @@
                                                     <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                                 </ul>
                                             </span>
-                                        </label> <!-- form-check end.// -->
+                                        </label>
                                         <label class="form-check mb-2">
                                             <input class="form-check-input" type="checkbox" value="" checked="">
                                             <span class="form-check-label">
@@ -198,7 +188,7 @@
                                                     <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                                 </ul>
                                             </span>
-                                        </label> <!-- form-check end.// -->
+                                        </label>
                                         <label class="form-check mb-2">
                                             <input class="form-check-input" type="checkbox" value="" checked="">
                                             <span class="form-check-label">
@@ -209,20 +199,15 @@
                                                     <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
                                                 </ul>
                                             </span>
-                                        </label> <!-- form-check end.// -->
+                                        </label>
 
 
-                                    </div> <!-- card-body.// -->
-                                </div> <!-- collapse.// -->
-                            </article> <!-- filter-group // -->
-
-                        </div> <!-- card.// -->
-
-                        <!-- ===== Card for sidebar filter .// ===== -->
-
-                    </aside> <!-- col .// -->
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </aside>
                     <main class="col-lg-9">
-
                         <header class="d-sm-flex align-items-center border-bottom mb-4 pb-3">
                             <strong class="d-block py-2">32 Items found </strong>
                             <div class="ms-auto">
@@ -239,225 +224,11 @@
                                     <a href="#" class="btn btn-light active" data-bs-toggle="tooltip" title="Grid view">
                                         <i class="fa fa-th"></i>
                                     </a>
-                                </div> <!-- btn-group end.// -->
+                                </div>
                             </div>
                         </header>
-
-                        <!-- ========= content items ========= -->
-                        <article class="card card-product-list">
-                            <div class="row g-0">
-                                <aside class="col-xl-3 col-md-4">
-                                    <a href="#" class="img-wrap"> <img src="~/static/images/items/8.jpg"> </a>
-                                </aside> <!-- col.// -->
-                                <div class="col-xl-6 col-md-5 col-sm-7">
-                                    <div class="card-body">
-                                        <a href="#" class="title h5"> Rucksack Backpack Jeans </a>
-
-                                        <div class="rating-wrap mb-2">
-                                            <ul class="rating-stars">
-                                                <li class="stars-active" style="width: 90%;">
-                                                    <img src="~/static/images/misc/stars-active.svg" alt="">
-                                                </li>
-                                                <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
-                                            </ul>
-                                            <span class="label-rating text-warning">4.5</span>
-                                            <i class="dot"></i>
-                                            <span class="label-rating text-muted">154 orders</span>
-                                        </div> <!-- rating-wrap.// -->
-                                        <p> Short description about the product goes here, for ex its features. Lorem ipsum
-                                            dolor sit amet with hapti you enter into any new area of science, you almost
-                                            lorem ipsum is great text consectetur adipisicing</p>
-                                    </div> <!-- card-body.// -->
-                                </div> <!-- col.// -->
-                                <aside class="col-xl-3 col-md-3 col-sm-5">
-                                    <div class="info-aside">
-                                        <div class="price-wrap">
-                                            <span class="price h5"> $34.50 </span>
-                                            <del class="price-old"> $198</del>
-                                        </div> <!-- info-price-detail // -->
-                                        <p class="text-success">Free shipping</p>
-                                        <br>
-                                        <div class="mb-3">
-                                            <a href="#" class="btn btn-primary"> Buy this </a>
-                                            <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                                        </div>
-                                    </div> <!-- info-aside.// -->
-                                </aside> <!-- col.// -->
-                            </div> <!-- row.// -->
-                        </article>
-
-                        <article class="card card-product-list">
-                            <div class="row g-0">
-                                <aside class="col-xl-3 col-md-4">
-                                    <a href="#" class="img-wrap"> <img src="~/static/images/items/9.jpg"> </a>
-                                </aside> <!-- col.// -->
-                                <div class="col-xl-6 col-md-5 col-sm-7">
-                                    <div class="card-body">
-                                        <a href="#" class="title h5"> Men's Denim Jeans Shorts </a>
-
-                                        <div class="rating-wrap mb-2">
-                                            <ul class="rating-stars">
-                                                <li class="stars-active" style="width: 40%;">
-                                                    <img src="~/static/images/misc/stars-active.svg" alt="">
-                                                </li>
-                                                <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
-                                            </ul>
-                                            <span class="label-rating text-warning">3.5</span>
-                                            <i class="dot"></i>
-                                            <span class="label-rating text-muted">74 orders</span>
-                                        </div> <!-- rating-wrap.// -->
-                                        <p> Re-engineered Digital Crown with hapti Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua
-                                            tempor incididunt ut labore et dolore magna [...] </p>
-                                    </div> <!-- card-body.// -->
-                                </div> <!-- col.// -->
-                                <aside class="col-xl-3 col-md-3 col-sm-5">
-                                    <div class="info-aside">
-                                        <div class="price-wrap">
-                                            <span class="price h5"> $140.90 </span>
-                                        </div> <!-- info-price-detail // -->
-                                        <p class="text-warning">Paid shipping</p>
-                                        <br>
-                                        <div class="mb-3">
-                                            <a href="#" class="btn btn-primary"> Buy this </a>
-                                            <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                                        </div>
-                                    </div> <!-- info-aside.// -->
-                                </aside> <!-- col.// -->
-                            </div> <!-- row.// -->
-                        </article>
-
-                        <article class="card card-product-list">
-                            <div class="row g-0">
-                                <aside class="col-xl-3 col-md-4">
-                                    <a href="#" class="img-wrap"> <img src="~/static/images/items/10.jpg"> </a>
-                                </aside> <!-- col.// -->
-                                <div class="col-xl-6 col-md-5 col-sm-7">
-                                    <div class="card-body">
-                                        <a href="#" class="title h5"> T-shirt for Men Blue Cotton Base </a>
-
-                                        <div class="rating-wrap mb-2">
-                                            <ul class="rating-stars">
-                                                <li class="stars-active" style="width: 70%;">
-                                                    <img src="~/static/images/misc/stars-active.svg" alt="">
-                                                </li>
-                                                <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
-                                            </ul>
-                                            <span class="label-rating text-warning">3.5</span>
-                                            <i class="dot"></i>
-                                            <span class="label-rating text-muted">910 orders</span>
-                                        </div> <!-- rating-wrap.// -->
-                                        <p> The largest Apple Watch display yet. Electrical heart sensor. Crown with hapti
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua </p>
-                                    </div> <!-- card-body.// -->
-                                </div> <!-- col.// -->
-                                <aside class="col-xl-3 col-md-3 col-sm-5">
-                                    <div class="info-aside">
-                                        <div class="price-wrap">
-                                            <span class="price h5"> $99.00 </span>
-                                        </div> <!-- info-price-detail // -->
-                                        <p class="text-success">Free shipping</p>
-                                        <br>
-                                        <div class="mb-3">
-                                            <a href="#" class="btn btn-primary"> Buy this </a>
-                                            <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                                        </div>
-                                    </div> <!-- info-aside.// -->
-                                </aside> <!-- col.// -->
-                            </div> <!-- row.// -->
-                        </article>
-
-                        <article class="card card-product-list">
-                            <div class="row g-0">
-                                <aside class="col-xl-3 col-md-4">
-                                    <a href="#" class="img-wrap"> <img src="~/static/images/items/11.jpg"> </a>
-                                </aside> <!-- col.// -->
-                                <div class="col-xl-6 col-md-5 col-sm-7">
-                                    <div class="card-body">
-                                        <a href="#" class="title h5"> Winter Jacket for Men and Women </a>
-
-                                        <div class="rating-wrap mb-2">
-                                            <ul class="rating-stars">
-                                                <li class="stars-active" style="width: 90%;">
-                                                    <img src="~/static/images/misc/stars-active.svg" alt="">
-                                                </li>
-                                                <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
-                                            </ul>
-                                            <span class="label-rating text-warning">4.5</span>
-                                            <i class="dot"></i>
-                                            <span class="label-rating text-muted">154 orders</span>
-                                        </div> <!-- rating-wrap.// -->
-                                        <p> Short description about the product goes here, for ex its features. Lorem ipsum
-                                            dolor sit amet with hapti you enter into any new area of science, you almost
-                                            lorem ipsum is great text </p>
-                                    </div> <!-- card-body.// -->
-                                </div> <!-- col.// -->
-                                <aside class="col-xl-3 col-md-3 col-sm-5">
-                                    <div class="info-aside">
-                                        <div class="price-wrap">
-                                            <span class="price h5"> $140.00 </span>
-                                            <del class="price-old"> $198</del>
-                                        </div> <!-- info-price-detail // -->
-                                        <p class="text-success">Free shipping</p>
-                                        <br>
-                                        <div class="mb-3">
-                                            <a href="#" class="btn btn-primary"> Buy this </a>
-                                            <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                                        </div>
-                                    </div> <!-- info-aside.// -->
-                                </aside> <!-- col.// -->
-                            </div> <!-- row.// -->
-                        </article>
-
-                        <article class="card card-product-list">
-                            <div class="row g-0">
-                                <aside class="col-xl-3 col-md-4">
-                                    <a href="#" class="img-wrap"> <img src="~/static/images/items/12.jpg"> </a>
-                                </aside> <!-- col.// -->
-                                <div class="col-xl-6 col-md-5 col-sm-7">
-                                    <div class="card-body">
-                                        <a href="#" class="title h5"> T-shirt for Men Blue Cotton Base </a>
-
-                                        <div class="rating-wrap mb-2">
-                                            <ul class="rating-stars">
-                                                <li class="stars-active" style="width: 90%;">
-                                                    <img src="~/static/images/misc/stars-active.svg" alt="">
-                                                </li>
-                                                <li> <img src="~/static/images/misc/starts-disable.svg" alt=""> </li>
-                                            </ul>
-                                            <span class="label-rating text-warning">4.5</span>
-                                            <i class="dot"></i>
-                                            <span class="label-rating text-muted">154 orders</span>
-                                        </div> <!-- rating-wrap.// -->
-                                        <p> Short description about the product goes here, for ex its features. Lorem ipsum
-                                            dolor sit amet with hapti you enter into any new area of science, you almost
-                                            lorem ipsum </p>
-                                    </div> <!-- card-body.// -->
-                                </div> <!-- col.// -->
-                                <aside class="col-xl-3 col-md-3 col-sm-5">
-                                    <div class="info-aside">
-                                        <div class="price-wrap">
-                                            <span class="price h5"> $99.50 </span>
-                                            <del class="price-old"> $130</del>
-                                        </div> <!-- info-price-detail // -->
-                                        <p class="text-success">Free shipping</p>
-                                        <br>
-                                        <div class="mb-3">
-                                            <a href="#" class="btn btn-primary"> Buy this </a>
-                                            <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                                        </div>
-                                    </div> <!-- info-aside.// -->
-                                </aside> <!-- col.// -->
-                            </div> <!-- row.// -->
-                        </article>
-
-
-
-
+                        <CategoryProductList />
                         <hr>
-
                         <footer class="d-flex mt-4">
                             <div>
                                 <a href="javascript: history.back()" class="btn btn-light"> &laquo; Go back</a>
@@ -475,18 +246,12 @@
                                 </ul>
                             </nav>
                         </footer>
-
-                        <!-- ========= content items .// ========= -->
-
-
-
-                    </main> <!-- col .// -->
-                </div> <!-- row .// -->
-
-            </div> <!-- container .//  -->
+                    </main>
+                </div>
+            </div>
         </section>
-        <!-- ============== SECTION CONTENT END// ============== -->
-</Fragment></template>
+    </Fragment>
+</template>
 <script>
 import { Fragment } from 'vue-fragment'
 export default {
