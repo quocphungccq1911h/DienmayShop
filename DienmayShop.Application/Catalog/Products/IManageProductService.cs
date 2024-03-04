@@ -2,7 +2,7 @@
 using DienmayShop.ViewModel.Common;
 using Microsoft.AspNetCore.Http;
 
-namespace DienmayShop.Application.Cayalog.Products
+namespace DienmayShop.Application.Catalog.Products
 {
     public interface IManageProductService
     {
@@ -21,5 +21,6 @@ namespace DienmayShop.Application.Cayalog.Products
         Task<ApiResult<ProductVm>> GetProductById(int productId, string languageId);
         Task<ApiResult<bool>> CategoryAssign(int id, CategoryAssignRequest request);
         Task<ApiResult<List<ProductVm>>> GetListProductFeature(string languageId);
+        Task<PagedResult<ProductVm>> GetListLates(GetProductLatesRequest request);
     }
 }

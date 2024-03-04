@@ -5,9 +5,10 @@ using DienmayShop.Utilities.Extensions;
 using DienmayShop.ViewModel.Catalog.Products;
 using DienmayShop.ViewModel.Common;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
 
-namespace DienmayShop.Application.Cayalog.Products
+namespace DienmayShop.Application.Catalog.Products
 {
     public class ManageProductService : IManageProductService
     {
@@ -142,6 +143,9 @@ namespace DienmayShop.Application.Cayalog.Products
         public async Task<bool> UpdatePrice(int productId, decimal newPrice)
         {
             var product = await _context.Products.FindAsync(productId);
+            if (product == null) throw new DienmayShopException($"Cannot find a product with if: {productId}");
+            product.Price = newPrice;
+            return await _context.SaveChangesAsync() > 0;
         }
 
         public Task<bool> UpdateStock(int productId, int addedQuantity)
@@ -155,6 +159,47 @@ namespace DienmayShop.Application.Cayalog.Products
             var fileName = $"{Guid.NewGuid()}{Path.GetExtension(originalFileName)}";
             await _storageService.SaveFileAsync(file.OpenReadStream(), fileName);
             return fileName;
+        }
+
+        public async Task<PagedResult<ProductVm>> GetListLates(GetProductLatesRequest request)
+        {
+            var query = from p in _context.Products
+                        join pt in _context.ProductTranslations on p.Id equals pt.ProductId
+                        join pic in _context.ProductInCategories on p.Id equals pic.ProductId into ppic
+                        from pic in ppic.DefaultIfEmpty()
+                        join c in _context.Categories on pic.CategoryId equals c.Id into picc
+                        from c in picc.DefaultIfEmpty()
+                        where pt.LanguageId == request.LanguageId && p.IsFeature == true
+                        select new { p, pt, pic, c };
+            int totalRow = await query.CountAsync();
+            var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
+            .Take(request.PageSize).Select(x => new ProductVm
+            {
+                Id = x.p.Id,
+                Price = x.p.Price,
+                OriginalPrice = x.p.OriginalPrice,
+                Stock = x.p.Stock,
+                ViewCount = x.p.ViewCount,
+                DateCreated = x.p.CreateDate,
+                Name = x.pt.Name,
+                Description = x.pt.Description,
+                Details = x.pt.Details,
+                SeoDescription = x.pt.SeoDescription,
+                SeoTitle = x.pt.SeoTitle,
+                SeoAlias = x.pt.SeoAlias,
+                LanguageId = x.pt.LanguageId,
+                IsFeatured = x.p.IsFeature,
+                Categories = x.c.CategoryTranslations.Where(e=>e.LanguageId == "vi-VN").Select(e => e.Name).ToList(),
+            }).ToListAsync();
+            // Select and Projection
+            var pageResult = new PagedResult<ProductVm>
+            {
+                TotalRecords = totalRow,
+                Items = data,
+                PageIndex = request.PageIndex,
+                PageSize = request.PageSize
+            };
+            return pageResult;
         }
     }
 }

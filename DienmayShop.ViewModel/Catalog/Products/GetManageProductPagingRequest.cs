@@ -9,4 +9,5 @@ namespace DienmayShop.ViewModel.Catalog.Products
         public List<int>? CategoryIds { get; set; }
         public int? CategoryId { get; set; }
     }
+    public class GetProductLatesRequest : GetManageProductPagingRequest { }
 }

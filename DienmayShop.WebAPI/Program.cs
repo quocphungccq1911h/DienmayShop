@@ -1,4 +1,6 @@
-﻿using DienmayShop.Application.PhungTest;
+﻿using DienmayShop.Application.Catalog.Products;
+using DienmayShop.Application.Common;
+using DienmayShop.Application.PhungTest;
 using DienmayShop.Application.System.Users;
 using DienmayShop.Configurations.ConfigAppSettings;
 using DienmayShop.Configurations.Constants;
@@ -45,7 +47,9 @@ builder.Services.AddDbContext<DienmayShopDbContext>(option => option.UseSqlServe
 builder.Services.AddScoped<IPhungTestService, PhungTestService>();
 builder.Services.AddScoped<IRabitMQProducer, RabitMQProducer>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IStorageService, FileStorageService>();
 builder.Services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
+builder.Services.AddScoped<IManageProductService, ManageProductService>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<DienmayShopDbContext>().AddDefaultTokenProviders();
 
 
