@@ -1,119 +1,269 @@
 <template>
     <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-sm-6 col-12">
             <figure class="card card-product-grid">
-                <a href="/may-lanh/may-lanh-lg/detail/7" class="img-wrap">
-                    <span class="topbar"> <b class="badge bg-success"> Offer </b> </span>
-                    <img src="~/static/images/items/12.jpg">
-                </a>
-                <figcaption class="info-wrap border-top">
-                    <a href="/may-lanh/may-lanh-lg/detail/7" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                    <a href="/may-lanh/may-lanh-lg/detail/7" class="title text-truncate">Blue T-shirt for Men</a>
-                    <small class="text-muted">Sizes: S, M, XL</small>
-                    <div class="price-wrap">
-                        <span class="price">$15.90</span> <del class="price-old">$20</del>
+                <div class="img-wrap">
+                    <img src="~/static/images/items/4.jpg" alt="image">
+                </div>
+                <figcaption class="info-wrap">
+                    <span class="text-warning">Bestseller</span>
+                    <p class="title">Apple iPhone 13 Pro max 7.1" RAM 6GB 512GB Global</p>
+
+                    <div class="rating-wrap">
+                        <ul class="rating-stars">
+                            <li class="stars-active" style="width: 90%;">
+                                <img src="~/static/images/misc/stars-active.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/static/images/misc/starts-disable.svg" alt="">
+                            </li>
+                        </ul>
+                        <span class="label-rating text-warning">4.5</span>
+                    </div> <!-- rating-wrap.// -->
+                </figcaption>
+
+                <div class="bottom-wrap">
+                    <a href="#" class="btn  btn-primary float-end"> Add to cart </a>
+                    <div class="price-wrap lh-sm">
+                        <strong class="price"> $399.50 </strong> <br>
+                        <small class="text-muted">$10 / per month </small>
                     </div> <!-- price-wrap.// -->
-                </figcaption>
-            </figure>
-        </div> <!-- col end.// -->
+                </div> <!-- bottom-wrap.// -->
 
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <figure class="card card-product-grid">
-                <a href="#" class="img-wrap">
-                    <img src="~/static/images/items/11.jpg">
-                </a>
-                <figcaption class="info-wrap border-top">
-                    <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                    <a href="#" class="title text-truncate">Warm Winter Jacket</a>
-                    <small class="text-muted">Sizes: S, M, XL</small>
-                    <div class="price">$72.90</div> <!-- price-wrap.// -->
-                </figcaption>
-            </figure>
-        </div> <!-- col end.// -->
+            </figure> <!-- card // -->
+        </div> <!-- col.// -->
 
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-sm-6 col-12">
             <figure class="card card-product-grid">
-                <a href="#" class="img-wrap">
-                    <img src="~/static/images/items/10.jpg">
-                </a>
-                <figcaption class="info-wrap border-top">
-                    <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                    <a href="#" class="title text-truncate">Mens T-shirt Cotton Base</a>
-                    <small class="text-muted">Blue, White, Black</small>
-                    <div class="price">$29.98</div> <!-- price-wrap.// -->
-                </figcaption>
-            </figure>
-        </div> <!-- col end.// -->
+                <div class="img-wrap">
+                    <img src="~/static/images/items/4.jpg" alt="image">
+                </div>
+                <figcaption class="info-wrap">
+                    <span class="text-warning">Bestseller</span>
+                    <p class="title">Apple iPhone 13 Pro max 7.1" RAM 6GB 512GB Global</p>
 
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <figure class="card card-product-grid">
-                <a href="#" class="img-wrap">
-                    <img src="~/static/images/items/9.jpg">
-                </a>
-                <figcaption class="info-wrap border-top">
-                    <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                    <a href="#" class="title text-truncate">Men's Denim Shorts Jeans</a>
-                    <small class="text-muted">Blue, White, Black</small>
-                    <div class="price">$75.50</div> <!-- price-wrap.// -->
+                    <div class="rating-wrap">
+                        <ul class="rating-stars">
+                            <li class="stars-active" style="width: 90%;">
+                                <img src="~/static/images/misc/stars-active.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/static/images/misc/starts-disable.svg" alt="">
+                            </li>
+                        </ul>
+                        <span class="label-rating text-warning">4.5</span>
+                    </div> <!-- rating-wrap.// -->
                 </figcaption>
-            </figure>
-        </div> <!-- col end.// -->
 
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <figure class="card card-product-grid">
-                <a href="#" class="img-wrap">
-                    <img src="~/static/images/items/5.jpg">
-                </a>
-                <figcaption class="info-wrap border-top">
-                    <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                    <a href="#" class="title text-truncate">Apple Watch Series 1 Sport Case 38mm Black</a>
-                    <small class="text-muted">5GB, 10GB, 24GB</small>
-                    <div class="price">$75.50</div> <!-- price-wrap.// -->
-                </figcaption>
-            </figure>
-        </div> <!-- col end.// -->
+                <div class="bottom-wrap">
+                    <a href="#" class="btn  btn-primary float-end"> Add to cart </a>
+                    <div class="price-wrap lh-sm">
+                        <strong class="price"> $399.50 </strong> <br>
+                        <small class="text-muted">$10 / per month </small>
+                    </div> <!-- price-wrap.// -->
+                </div> <!-- bottom-wrap.// -->
 
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <figure class="card card-product-grid">
-                <a href="#" class="img-wrap">
-                    <img src="~/static/images/items/6.jpg">
-                </a>
-                <figcaption class="info-wrap border-top">
-                    <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                    <a href="#" class="title text-truncate">Gaming Headset 32db Blackbuilt in mic</a>
-                    <small class="text-muted">Black, Blue, Green</small>
-                    <div class="price">$99.50</div> <!-- price-wrap.// -->
-                </figcaption>
-            </figure>
-        </div> <!-- col end.// -->
+            </figure> <!-- card // -->
+        </div> <!-- col.// -->
 
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-sm-6 col-12">
             <figure class="card card-product-grid">
-                <a href="#" class="img-wrap">
-                    <img src="~/static/images/items/7.jpg">
-                </a>
-                <figcaption class="info-wrap border-top">
-                    <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                    <a href="#" class="title text-truncate">Gaming Headset 32db Blackbuilt in mic</a>
-                    <small class="text-muted">Sizes: S, M, XL</small>
-                    <div class="price">$41.50</div> <!-- price-wrap.// -->
-                </figcaption>
-            </figure>
-        </div> <!-- col end.// -->
+                <div class="img-wrap">
+                    <img src="~/static/images/items/4.jpg" alt="image">
+                </div>
+                <figcaption class="info-wrap">
+                    <span class="text-warning">Bestseller</span>
+                    <p class="title">Apple iPhone 13 Pro max 7.1" RAM 6GB 512GB Global</p>
 
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <figure class="card card-product-grid">
-                <a href="#" class="img-wrap">
-                    <img src="~/static/images/items/8.jpg">
-                </a>
-                <figcaption class="info-wrap border-top">
-                    <a href="#" class="float-end btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
-                    <a href="#" class="title text-truncate">Slim fit T-shirt for men</a>
-                    <small class="text-muted">Sizes: S, M, XL</small>
-                    <div class="price">$75.50</div> <!-- price-wrap.// -->
+                    <div class="rating-wrap">
+                        <ul class="rating-stars">
+                            <li class="stars-active" style="width: 90%;">
+                                <img src="~/static/images/misc/stars-active.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/static/images/misc/starts-disable.svg" alt="">
+                            </li>
+                        </ul>
+                        <span class="label-rating text-warning">4.5</span>
+                    </div> <!-- rating-wrap.// -->
                 </figcaption>
-            </figure>
-        </div> <!-- col end.// -->
+
+                <div class="bottom-wrap">
+                    <a href="#" class="btn  btn-primary float-end"> Add to cart </a>
+                    <div class="price-wrap lh-sm">
+                        <strong class="price"> $399.50 </strong> <br>
+                        <small class="text-muted">$10 / per month </small>
+                    </div> <!-- price-wrap.// -->
+                </div> <!-- bottom-wrap.// -->
+
+            </figure> <!-- card // -->
+        </div> <!-- col.// -->
+
+        <div class="col-lg-3 col-sm-6 col-12">
+            <figure class="card card-product-grid">
+                <div class="img-wrap">
+                    <img src="~/static/images/items/4.jpg" alt="image">
+                </div>
+                <figcaption class="info-wrap">
+                    <span class="text-warning">Bestseller</span>
+                    <p class="title">Apple iPhone 13 Pro max 7.1" RAM 6GB 512GB Global</p>
+
+                    <div class="rating-wrap">
+                        <ul class="rating-stars">
+                            <li class="stars-active" style="width: 90%;">
+                                <img src="~/static/images/misc/stars-active.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/static/images/misc/starts-disable.svg" alt="">
+                            </li>
+                        </ul>
+                        <span class="label-rating text-warning">4.5</span>
+                    </div> <!-- rating-wrap.// -->
+                </figcaption>
+
+                <div class="bottom-wrap">
+                    <a href="#" class="btn  btn-primary float-end"> Add to cart </a>
+                    <div class="price-wrap lh-sm">
+                        <strong class="price"> $399.50 </strong> <br>
+                        <small class="text-muted">$10 / per month </small>
+                    </div> <!-- price-wrap.// -->
+                </div> <!-- bottom-wrap.// -->
+
+            </figure> <!-- card // -->
+        </div> <!-- col.// -->
+
+        <div class="col-lg-3 col-sm-6 col-12">
+            <figure class="card card-product-grid">
+                <div class="img-wrap">
+                    <img src="~/static/images/items/4.jpg" alt="image">
+                </div>
+                <figcaption class="info-wrap">
+                    <span class="text-warning">Bestseller</span>
+                    <p class="title">Apple iPhone 13 Pro max 7.1" RAM 6GB 512GB Global</p>
+
+                    <div class="rating-wrap">
+                        <ul class="rating-stars">
+                            <li class="stars-active" style="width: 90%;">
+                                <img src="~/static/images/misc/stars-active.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/static/images/misc/starts-disable.svg" alt="">
+                            </li>
+                        </ul>
+                        <span class="label-rating text-warning">4.5</span>
+                    </div> <!-- rating-wrap.// -->
+                </figcaption>
+
+                <div class="bottom-wrap">
+                    <a href="#" class="btn  btn-primary float-end"> Add to cart </a>
+                    <div class="price-wrap lh-sm">
+                        <strong class="price"> $399.50 </strong> <br>
+                        <small class="text-muted">$10 / per month </small>
+                    </div> <!-- price-wrap.// -->
+                </div> <!-- bottom-wrap.// -->
+
+            </figure> <!-- card // -->
+        </div> <!-- col.// -->
+
+        <div class="col-lg-3 col-sm-6 col-12">
+            <figure class="card card-product-grid">
+                <div class="img-wrap">
+                    <img src="~/static/images/items/4.jpg" alt="image">
+                </div>
+                <figcaption class="info-wrap">
+                    <span class="text-warning">Bestseller</span>
+                    <p class="title">Apple iPhone 13 Pro max 7.1" RAM 6GB 512GB Global</p>
+
+                    <div class="rating-wrap">
+                        <ul class="rating-stars">
+                            <li class="stars-active" style="width: 90%;">
+                                <img src="~/static/images/misc/stars-active.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/static/images/misc/starts-disable.svg" alt="">
+                            </li>
+                        </ul>
+                        <span class="label-rating text-warning">4.5</span>
+                    </div> <!-- rating-wrap.// -->
+                </figcaption>
+
+                <div class="bottom-wrap">
+                    <a href="#" class="btn  btn-primary float-end"> Add to cart </a>
+                    <div class="price-wrap lh-sm">
+                        <strong class="price"> $399.50 </strong> <br>
+                        <small class="text-muted">$10 / per month </small>
+                    </div> <!-- price-wrap.// -->
+                </div> <!-- bottom-wrap.// -->
+
+            </figure> <!-- card // -->
+        </div> <!-- col.// -->
+
+        <div class="col-lg-3 col-sm-6 col-12">
+            <figure class="card card-product-grid">
+                <div class="img-wrap">
+                    <img src="~/static/images/items/4.jpg" alt="image">
+                </div>
+                <figcaption class="info-wrap">
+                    <span class="text-warning">Bestseller</span>
+                    <p class="title">Apple iPhone 13 Pro max 7.1" RAM 6GB 512GB Global</p>
+
+                    <div class="rating-wrap">
+                        <ul class="rating-stars">
+                            <li class="stars-active" style="width: 90%;">
+                                <img src="~/static/images/misc/stars-active.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/static/images/misc/starts-disable.svg" alt="">
+                            </li>
+                        </ul>
+                        <span class="label-rating text-warning">4.5</span>
+                    </div> <!-- rating-wrap.// -->
+                </figcaption>
+
+                <div class="bottom-wrap">
+                    <a href="#" class="btn  btn-primary float-end"> Add to cart </a>
+                    <div class="price-wrap lh-sm">
+                        <strong class="price"> $399.50 </strong> <br>
+                        <small class="text-muted">$10 / per month </small>
+                    </div> <!-- price-wrap.// -->
+                </div> <!-- bottom-wrap.// -->
+
+            </figure> <!-- card // -->
+        </div> <!-- col.// -->
+
+        <div class="col-lg-3 col-sm-6 col-12">
+            <figure class="card card-product-grid">
+                <div class="img-wrap">
+                    <img src="~/static/images/items/4.jpg" alt="image">
+                </div>
+                <figcaption class="info-wrap">
+                    <span class="text-warning">Bestseller</span>
+                    <p class="title">Apple iPhone 13 Pro max 7.1" RAM 6GB 512GB Global</p>
+
+                    <div class="rating-wrap">
+                        <ul class="rating-stars">
+                            <li class="stars-active" style="width: 90%;">
+                                <img src="~/static/images/misc/stars-active.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="~/static/images/misc/starts-disable.svg" alt="">
+                            </li>
+                        </ul>
+                        <span class="label-rating text-warning">4.5</span>
+                    </div> <!-- rating-wrap.// -->
+                </figcaption>
+
+                <div class="bottom-wrap">
+                    <a href="#" class="btn  btn-primary float-end"> Add to cart </a>
+                    <div class="price-wrap lh-sm">
+                        <strong class="price"> $399.50 </strong> <br>
+                        <small class="text-muted">$10 / per month </small>
+                    </div> <!-- price-wrap.// -->
+                </div> <!-- bottom-wrap.// -->
+
+            </figure> <!-- card // -->
+        </div> <!-- col.// --> 
+
     </div>
 </template>
 <script>
