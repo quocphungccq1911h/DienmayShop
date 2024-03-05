@@ -189,7 +189,7 @@ namespace DienmayShop.Application.Catalog.Products
                 SeoAlias = x.pt.SeoAlias,
                 LanguageId = x.pt.LanguageId,
                 IsFeatured = x.p.IsFeature,
-                Categories = x.c.CategoryTranslations.Where(e=>e.LanguageId == "vi-VN").Select(e => e.Name).ToList(),
+                Categories = x.c.CategoryTranslations.Where(e=>e.LanguageId == request.LanguageId).Select(e => e.Name).ToList(),
             }).ToListAsync();
             // Select and Projection
             var pageResult = new PagedResult<ProductVm>
