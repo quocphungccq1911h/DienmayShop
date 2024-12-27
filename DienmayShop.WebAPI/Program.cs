@@ -50,7 +50,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IStorageService, FileStorageService>();
 builder.Services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
 builder.Services.AddScoped<IManageProductService, ManageProductService>();
-builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<DienmayShopDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<DienmayShopDbContext>().AddDefaultTokenProviders(); 
 
 
 // add cache into Project
