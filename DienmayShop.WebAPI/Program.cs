@@ -46,7 +46,7 @@ builder.Services.AddScoped<IPhungTestService, PhungTestService>();
 builder.Services.AddScoped<IRabitMQProducer, RabitMQProducer>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
-builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<DienmayShopDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<DienmayShopDbContext>().AddDefaultTokenProviders(); 
 
 
 // add cache into Project
